@@ -1,6 +1,10 @@
 # ReactiveMongo Derived Codecs
 
-`BSONDocumentReader` and `BSONDocumentWriter` derivation for algebraic data types (sealed traits and case classes)
+`BSONDocumentReader` and `BSONDocumentWriter` derivation for algebraic data types (sealed traits and case classes).
+
+Compared to the ReactiveMongo’s macros, this project brings support for:
+- sealed traits ;
+- recursive types.
 
 ## Installation
 
