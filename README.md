@@ -36,7 +36,7 @@ sealed trait Foo
 case class Bar(i: Int, b: Boolean) extends Foo
 case class Baz(s: String) extends Foo
 object Foo {
-  implicit val bsonDecoder: BSONDocumentHandler[Foo] = derived.codec[Foo]
+  implicit val bsonCodec: BSONDocumentHandler[Foo] = derived.codec[Foo]
 }
 ~~~
 

@@ -19,8 +19,6 @@ pomExtra := (
     </developers>
 )
 
-sonatypeProfileName := "org.julienrf"
-
 import ReleaseTransformations._
 
 releaseProcess := Seq[ReleaseStep](
