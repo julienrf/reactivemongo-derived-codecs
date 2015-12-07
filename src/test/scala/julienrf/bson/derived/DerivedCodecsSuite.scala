@@ -1,9 +1,12 @@
 package julienrf.bson.derived
 
 import julienrf.bson.BSONDocumentHandler
-import org.scalacheck.{Gen, Arbitrary}
+import org.scalacheck.{Arbitrary, Gen}
 import org.scalatest.FunSuite
 import org.scalatest.prop.Checkers
+import reactivemongo.bson.BSONDocument
+
+import scala.util.{Failure, Try}
 
 class DerivedCodecsSuite extends FunSuite with Checkers {
 
@@ -25,6 +28,13 @@ class DerivedCodecsSuite extends FunSuite with Checkers {
 
   test("identity") {
     check((v: RecursiveAdtExample) => adtCodec.read(adtCodec.write(v)) == v)
+  }
+
+  test("decoding failure raises a meaningful error message") {
+    Try(adtCodec.read(BSONDocument())) match {
+      case Failure(t) if t.getMessage == "Unable to decode one of NestedAdtExample, BaseAdtExample" =>
+      case _ => fail()
+    }
   }
 
 }

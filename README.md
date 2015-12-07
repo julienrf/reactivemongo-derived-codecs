@@ -11,7 +11,7 @@ Compared to the ReactiveMongo’s macros, this project brings support for:
 Add the following dependency to your build:
 
 ~~~ scala
-libraryDependencies += "org.julienrf" %% "reactivemongo-derived-codecs" % "1.0"
+libraryDependencies += "org.julienrf" %% "reactivemongo-derived-codecs" % "1.1"
 ~~~
 
 ## Usage
@@ -42,6 +42,8 @@ object Foo {
 
 ## Changelog
 
+- 1.1
+    - Improved error message in case of failure when decoding a sum type
 - 1.0
     - First release
 
