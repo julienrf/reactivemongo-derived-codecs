@@ -51,7 +51,7 @@ object DerivedDecoder extends DerivedDecoderLowPriority {
   ): DerivedDecoder[A, FieldType[K, H] :: T] =
     new DerivedDecoder[A, FieldType[K, H] :: T] {
       def read(bson: BSONDocument) = {
-        val h = bson.getAs(fieldName.value.name)(decodeH.value).getOrElse(sys.error(s"Unable to decode field $fieldName"))
+        val h = bson.getAs(fieldName.value.name)(decodeH.value).getOrElse(sys.error(s"Unable to decode field ${fieldName.value.name}"))
         val t = decodeT.value.read(bson)
         field[K](h) :: t
       }
