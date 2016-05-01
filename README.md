@@ -44,6 +44,7 @@ object Foo {
 
 - 2.0
     - Upgrade to shapeless 2.3.0, enum 3.0 and ReactiveMongo 0.11.11
+    - Make `BSONDocumentHandler[A]` extend `BSONHandler[BSONDocument, A]`
 - 1.1
     - Improved error message in case of failure when decoding a sum type
 - 1.0
