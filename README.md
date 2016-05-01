@@ -11,10 +11,14 @@ Compared to the ReactiveMongo’s macros, this project brings support for:
 Add the following dependency to your build:
 
 ~~~ scala
-libraryDependencies += "org.julienrf" %% "reactivemongo-derived-codecs" % "1.1"
+libraryDependencies += "org.julienrf" %% "reactivemongo-derived-codecs" % "2.0"
 ~~~
 
+Version 2.0 is built against Scala 2.11, shapeless 2.3.0 and ReactiveMongo 0.11.11.
+
 ## Usage
+
+See [API documentation](http://julienrf.github.io/reactivemongo-derived-codecs/2.0/api).
 
 ### Case classes
 
