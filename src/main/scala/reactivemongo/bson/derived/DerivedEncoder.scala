@@ -1,6 +1,6 @@
-package julienrf.bson.derived
+package reactivemongo.bson
+package derived
 
-import reactivemongo.bson.{BSONDocument, BSONValue, BSONWriter, BSONDocumentWriter}
 import shapeless.labelled.FieldType
 import shapeless.{LabelledGeneric, HList, Inr, Inl, Lazy, Witness, :+:, Coproduct, HNil, CNil, ::}
 

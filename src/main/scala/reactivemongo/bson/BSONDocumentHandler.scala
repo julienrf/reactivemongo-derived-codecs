@@ -1,9 +1,7 @@
-package julienrf.bson
-
-import reactivemongo.bson.{BSONDocument, BSONDocumentReader, BSONDocumentWriter, BSONHandler}
+package reactivemongo.bson
 
 /**
-  * Allows us to define both a reader and a writer in one shot.
+  * Allows the definition of both a reader and a writer in one shot.
   */
 trait BSONDocumentHandler[A] extends BSONHandler[BSONDocument, A] with BSONDocumentReader[A] with BSONDocumentWriter[A] {
   val reader: BSONDocumentReader[A]

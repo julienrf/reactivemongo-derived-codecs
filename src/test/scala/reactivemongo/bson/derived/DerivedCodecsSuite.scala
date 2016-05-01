@@ -1,10 +1,9 @@
-package julienrf.bson.derived
+package reactivemongo.bson
+package derived
 
-import julienrf.bson.BSONDocumentHandler
 import org.scalacheck.{Arbitrary, Gen}
 import org.scalatest.FunSuite
 import org.scalatest.prop.Checkers
-import reactivemongo.bson.BSONDocument
 
 import scala.util.{Failure, Try}
 

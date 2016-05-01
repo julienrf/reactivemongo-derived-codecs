@@ -19,7 +19,7 @@ libraryDependencies += "org.julienrf" %% "reactivemongo-derived-codecs" % "1.1"
 ### Case classes
 
 ~~~ scala
-import julienrf.bson.{derived, BSONDocumentHandler}
+import reactivemongo.bson.{derived, BSONDocumentHandler}
 
 case class User(name: String, age: Int)
 object User {
@@ -30,7 +30,7 @@ object User {
 ### Sealed traits
 
 ~~~ scala
-import julienrf.bson.{derived, BSONDocumentHandler}
+import reactivemongo.bson.{derived, BSONDocumentHandler}
 
 sealed trait Foo
 case class Bar(i: Int, b: Boolean) extends Foo
@@ -45,6 +45,7 @@ object Foo {
 - 2.0
     - Upgrade to shapeless 2.3.0, enum 3.0 and ReactiveMongo 0.11.11
     - Make `BSONDocumentHandler[A]` extend `BSONHandler[BSONDocument, A]`
+    - Move everything into package `reactivemongo.bson.derived`
 - 1.1
     - Improved error message in case of failure when decoding a sum type
 - 1.0

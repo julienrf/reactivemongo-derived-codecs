@@ -1,8 +1,20 @@
-package julienrf.bson
+package reactivemongo.bson
 
-import reactivemongo.bson.{BSONDocumentReader, BSONDocumentWriter}
 import shapeless.Lazy
 
+/**
+  * {{{
+  *   import reactivemongo.bson.{derived, BSONDocumentHandler}
+  *
+  *   sealed trait Foo
+  *   case class Bar(i: Int, s: String) extends Foo
+  *   case class Baz(b: Boolean) extends Foo
+  *
+  *   object Foo {
+  *     implicit val codec: BSONDocumentHandler[Foo] = derived.codec
+  *   }
+  * }}}
+  */
 package object derived {
 
   def decoder[A](implicit decoder: Lazy[DerivedDecoder[_, A]]): BSONDocumentReader[A] = decoder.value
