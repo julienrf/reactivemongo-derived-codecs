@@ -15,6 +15,7 @@ class DerivedCodecsSuite extends FunSuite with Checkers {
   case class BaseAdtExample(a: String) extends RecursiveAdtExample
   case class NestedAdtExample(r: RecursiveAdtExample) extends RecursiveAdtExample
 
+  implicit val labels: enum.Labels[RecursiveAdtExample] = enum.Labels.derived
   implicit val adtCodec: BSONDocumentHandler[RecursiveAdtExample] = codec[RecursiveAdtExample]
 
   private def atDepth(depth: Int): Gen[RecursiveAdtExample] = if (depth < 3)

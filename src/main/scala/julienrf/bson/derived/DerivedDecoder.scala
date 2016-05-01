@@ -1,6 +1,6 @@
 package julienrf.bson.derived
 
-import julienrf.enum.Labels
+import enum.Labels
 import reactivemongo.bson.{BSONValue, BSONReader, BSONDocument, BSONDocumentReader}
 import shapeless.labelled.{field, FieldType}
 import shapeless.{Inl, Inr, :+:, Witness, HNil, CNil, HList, Lazy, LabelledGeneric, Coproduct, ::}
