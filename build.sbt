@@ -4,12 +4,14 @@ organization := "org.julienrf"
 
 scalaVersion := "2.11.8"
 
+crossScalaVersions := Seq("2.11.8", "2.12.1")
+
 libraryDependencies ++= Seq(
-  "com.chuusai" %% "shapeless" % "2.3.0",
-  "org.reactivemongo" %% "reactivemongo-bson" % "0.11.11",
-  "org.julienrf" %% "enum-labels" % "3.0",
-  "org.scalacheck" %% "scalacheck" % "1.12.5" % Test,
-  "org.scalatest" %% "scalatest" % "2.2.4" % Test
+  "com.chuusai" %% "shapeless" % "2.3.2",
+  "org.reactivemongo" %% "reactivemongo-bson" % "0.12.2" % Provided,
+  "org.julienrf" %% "enum-labels" % "3.1",
+  "org.scalacheck" %% "scalacheck" % "1.13.5" % Test,
+  "org.scalatest" %% "scalatest" % "3.0.3" % Test
 )
 
 scalacOptions ++= Seq(
