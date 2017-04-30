@@ -11,14 +11,14 @@ Compared to the ReactiveMongo’s macros, this project brings support for:
 Add the following dependency to your build:
 
 ~~~ scala
-libraryDependencies += "org.julienrf" %% "reactivemongo-derived-codecs" % "2.0"
+libraryDependencies += "org.julienrf" %% "reactivemongo-derived-codecs" % "3.0"
 ~~~
 
-Version 2.0 is built against Scala 2.11, shapeless 2.3.0 and ReactiveMongo 0.11.11.
+Version 3.0 is built against Scala 2.11 and 2.12, shapeless 2.3 and ReactiveMongo 0.12.
 
 ## Usage
 
-See [API documentation](http://julienrf.github.io/reactivemongo-derived-codecs/2.0/api/).
+See [API documentation](http://julienrf.github.io/reactivemongo-derived-codecs/3.0/api/).
 
 ### Case classes
 
@@ -46,6 +46,9 @@ object Foo {
 
 ## Changelog
 
+- 3.0
+    - ReactiveMongo 0.12 support
+    - Scala 2.11 and 2.12 support
 - 2.0
     - Upgrade to shapeless 2.3.0, enum 3.0 and ReactiveMongo 0.11.11
     - Make `BSONDocumentHandler[A]` extend `BSONHandler[BSONDocument, A]`
